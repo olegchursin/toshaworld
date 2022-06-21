@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Footer from './footer';
+import Navbar from './navbar';
 
 const Layout: React.FC<any> = ({ children }) => {
   return (
@@ -21,11 +23,11 @@ const Layout: React.FC<any> = ({ children }) => {
       </Head>
 
       <div className="dark:bg-gray-900">
-        <nav>Navigation</nav>
+        <Navbar />
         <main>{children}</main>
       </div>
 
-      <footer>Footer</footer>
+      <Footer />
     </>
   );
 };
