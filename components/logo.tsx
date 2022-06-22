@@ -1,5 +1,11 @@
-const Logo = () => {
-  return (
+import Link from 'next/link';
+
+interface ILogo {
+  readonly href?: string;
+}
+
+const Logo: React.FC<ILogo> = ({ href }) => {
+  const base = (
     <h1 className="flex items-center gap-4 text-yellow-700">
       <span>Tosha</span>
       <span>
@@ -8,6 +14,16 @@ const Logo = () => {
       <span>World</span>
     </h1>
   );
+
+  const logo = href ? (
+    <Link href={href}>
+      <div className="cursor-pointer">{base}</div>
+    </Link>
+  ) : (
+    base
+  );
+
+  return logo;
 };
 
 export default Logo;

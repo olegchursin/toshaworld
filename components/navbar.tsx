@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className=" p-8 shadow-md">
       <div className="container flex items-center justify-center">
-        <Logo />
+        <Logo href="/" />
       </div>
     </nav>
   );
